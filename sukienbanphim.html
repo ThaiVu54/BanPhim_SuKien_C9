@@ -1,0 +1,129 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <img id="church" src="photo-1558642084-fd07fae5282e.jpg" height="300"/>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Event Keyboard</title>-->
+<!--</head>-->
+<!--<body onload="docReady()">-->
+
+
+<!--    <script>-->
+<!--        function upArrowPressed(){ // xây dựng phím xử lý nhấn lên-->
+<!--            let element = document.getElementById('church');-->
+<!--            element.style.top = parseInt(element.style.top) - 5 + 'px';-->
+<!--        }-->
+<!--        function downArrowPressed(){ // xây dựng phím xử lý nhấn xuống-->
+<!--            var element = document.getElementById('church');-->
+<!--            element.style.top = parseInt(element.style.top) + 5 + 'px'-->
+<!--        }-->
+<!--        function leftArrowPressed(){ // xây dựng phím xử lý nhấn sang trái-->
+<!--            var element = document.getElementById('church');-->
+<!--            element.style.left = parseInt(element.style.left) - 5 + 'px' ;-->
+<!--        }-->
+<!--        function rightArrowPressed(){ // xay dung phím nhấn sang phải-->
+<!--            var element = document.getElementById('church');-->
+<!--            element.style.left = parseInt(element.style.left) + 5 + 'px';-->
+<!--        }-->
+<!--        // xây dựng các hàm nhận các phím-->
+<!--        function move(evt){-->
+<!--            switch (evt.keyCode){-->
+<!--                case 231:-->
+<!--                    upArrowPressed();-->
+<!--                    break;-->
+<!--                case 83:-->
+<!--                    downArrowPressed();-->
+<!--                    break;-->
+<!--                case 65:-->
+<!--                    leftArrowPressed();-->
+<!--                    break;-->
+<!--                case 68:-->
+<!--                    rightArrowPressed();-->
+<!--                    break;-->
+<!--            }-->
+<!--        }-->
+<!--        function docReady(){-->
+<!--            init()-->
+<!--            window.addEventListener('keydown',move);-->
+<!--        }-->
+<!--        function init(){-->
+<!--            let img = document.getElementById('church')-->
+<!--            img.style.position = 'absolute';-->
+<!--            img.style.left = '300px';-->
+<!--            img.style.top = '300px';-->
+<!--        }-->
+<!--    </script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+    <style>
+        img {
+            height: 300px;
+            width: 168px;
+        }
+    </style>
+</head>
+<body onload="docReady()">
+<!--<img id="img" src="fa.jpg" alt="khonghienthi"/>-->
+<img id="img" src="photo-1558642084-fd07fae5282e.jpg" width="376"/>
+<script>
+    function upArrow() {
+        let element = document.getElementById("img");
+        element.style.top = parseInt(element.style.top) - 5 + "px";
+    }
+
+    function downArrow() {
+        let element = document.getElementById("img");
+        element.style.top = parseInt(element.style.top) + 5 + "px";
+    }
+
+    function leftArrow() {
+        let element = document.getElementById("img");
+        element.style.left = parseInt(element.style.left) - 5 + "px";
+    }
+
+    function rightArrow() {
+        let element = document.getElementById("img");
+        element.style.left = parseInt(element.style.left) + 5 + "px";
+    }
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 87:
+                upArrow();
+                break;
+            case 83:
+                downArrow();
+                break;
+            case 65:
+                leftArrow();
+                break;
+            case 68:
+                rightArrow();
+                break;
+        }
+    }
+
+    function docReady() {
+        init()
+        window.addEventListener("keydown", moveSelection)
+    }
+
+    function init() {
+        let imgObj = document.getElementById("img");
+        imgObj.style.position = "absolute";
+        imgObj.style.left = "300px";
+        imgObj.style.top = "300px";
+    }
+</script>
+</body>
+</html>
